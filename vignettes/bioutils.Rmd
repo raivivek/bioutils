@@ -1,0 +1,27 @@
+---
+title: "bioutils"
+author: "Leland Taylor"
+date: "`r Sys.Date()`"
+output:
+    rmarkdown::html_vignette:
+        df_print: tibble
+    rmarkdown::html_document:
+        df_print: paged
+    rmarkdown::github_document:
+        df_print: kable
+    rmarkdown::pdf_document:
+        df_print: tibble
+vignette: >
+  %\VignetteIndexEntry{bioutils}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This document will show a demo of how to use bioutils.
