@@ -25,16 +25,16 @@ on.exit(options(old), add = TRUE)
 #' @importFrom biomaRt getBM
 #' @export
 ensembl2hgnc <- function(
-    ensembl_gene_ids,
-    host = "grch37.ensembl.org",
-    drop_dot_ensembl_id = TRUE
-) {
+        ensembl_gene_ids,
+        host = "grch37.ensembl.org",
+        drop_dot_ensembl_id = TRUE
+    ) {
 
     ensembl_gene_ids <- as.character(ensembl_gene_ids)
     ensembl_gene_ids_original <- ensembl_gene_ids
     if (drop_dot_ensembl_id) {
         ensembl_gene_ids <- unlist(lapply(ensembl_gene_ids,
-                                          FUN = function(x) { return(strsplit(x, '\\.')[[1]][1]) }
+            FUN = function(x) { return(strsplit(x, '\\.')[[1]][1]) }
         ))
     }
     # put this in a tryCatch block in case biomaRt is down!

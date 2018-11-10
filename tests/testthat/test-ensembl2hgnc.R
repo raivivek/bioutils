@@ -1,5 +1,4 @@
 context('ensembl2hgnc')
-library(bioutils)
 
 test_that('ensembl2hgnc returns correct hgnc', {
     expect_equal(
